@@ -2,7 +2,7 @@ Expensica - Smart way to calculate your expense.
 
 ## Creator
 
-www.ubiquos.xyz was created by and is maintained by **Ritesh Hota**, Founder at Ubiquos LLP.
+www.expensica.com was created and maintained by **Ritesh Hota**, Founder at Ubiquos LLP.
 
 ## Credits
 
@@ -10,7 +10,7 @@ Dogfalo - Materialize
 
 Materialize, a CSS Framework based on material design
 
-### Current Version : v1.0
+### Current Version : v1.1
 
 ## Sass Requirements:
 - Ruby Sass 3.3+, LibSass 0.6+
@@ -20,6 +20,10 @@ Chrome 35+, Firefox 31+, Safari 7+, IE 10+
 
 ## Changelog
 
+v1.0 - Added Summary Page
+       Added Expense Page
+       Added Income Page
+       
 v1.0 - Added Login/ Register Page
        Homepage
        Preview
