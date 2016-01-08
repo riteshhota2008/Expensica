@@ -289,16 +289,29 @@
             var variable3= variable2-variable1;
             document.getElementById("Out_Balance").innerHTML = variable3;
 
-            var fruits = [];
-            document.getElementById("In_Expense").value = fruits;
+            //var fruits = [];
+            var ritesh;
+            var weekdays=new Array(10);
+            document.getElementById("In_Expense").value = weekdays;
 
-            for(var i=0;i <fruits.length;i++) {
-                ritesh += fruits[i];
+            for(var i=0;i <10;i++) {
+                ritesh = weekdays[i];
 
 
-                //fruits.push(ritesh)
+                weekdays.push(ritesh);
                 document.getElementById("demo").innerHTML = ritesh;
             }
+
+            //var myStringArray = ["Hello","World"];
+            var myStringArray = new Array(10);
+            document.getElementById("In_Expense").value = myStringArray;
+            var arrayLength = myStringArray.length;
+            for (var i = 0; i < arrayLength; i++) {
+                alert(myStringArray[i]);
+                //Do something
+                document.getElementById("demo").innerHTML = myStringArray[i];
+            }
+
         }
     </script>
 
