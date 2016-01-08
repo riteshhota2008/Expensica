@@ -20,12 +20,12 @@ Chrome 35+, Firefox 31+, Safari 7+, IE 10+
 
 ## Changelog
 
-v1.1 - Added Summary Page
-       Added Expense Page
-       Added Income Page
+v1.1 - Added Summary Page,
+       Expense Page,
+       Income Page
 
-v1.0 - Added Login/ Register Page
-       Homepage
+v1.0 - Added Login/ Register Page,
+       Homepage,
        Preview
 
 ## Copyright and License
