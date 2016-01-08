@@ -2,7 +2,7 @@ Expensica - Smart way to calculate your expense.
 
 ## Creator
 
-www.expensica.com was created and maintained by **Ritesh Hota**, Founder at Ubiquos LLP.
+www.expensica.com is created and maintained by **Ritesh Hota**, Founder at Ubiquos LLP.
 
 ## Credits
 
@@ -23,7 +23,7 @@ Chrome 35+, Firefox 31+, Safari 7+, IE 10+
 v1.0 - Added Summary Page
        Added Expense Page
        Added Income Page
-       
+
 v1.0 - Added Login/ Register Page
        Homepage
        Preview
