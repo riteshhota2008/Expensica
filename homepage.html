@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="description" content="Materialize is a modern responsive CSS framework based on Material Design by Google. ">
@@ -32,10 +32,15 @@
 </head>
 <body>
 <header>
-    <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only"><i class="mdi-navigation-menu"></i></a></div>
+    <div class="container">
+        <a href="#" data-activates="nav-mobile" class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only">
+            <i class="mdi-navigation-menu"></i>
+        </a>
+    </div>
     <ul id="nav-mobile" class="side-nav fixed">
         <li class="logo"><img src="res/ic_launcher%202.png" style="margin: -20px 0 0 0"> <!--<a id="logo-container" href="http://materializecss.com/" class="brand-logo">
-            <object id="front-page-logo" type="image/svg+xml" data="res/ic_launcher.png" style="margin: -10px 0 0 50px; width: 100px">Your browser does not support SVG</object></a>--></li>
+            <object id="front-page-logo" type="image/svg+xml" data="res/ic_launcher.png" style="margin: -10px 0 0 50px; width: 100px">Your browser does not support SVG</object></a>-->
+        </li>
         <li class="search">
             <div class="search-wrapper card">
                 <input id="search"><i class="material-icons">search</i>
@@ -77,7 +82,7 @@
 <!-- Summary -->
 <div id="summary">
 
-    <div class="container">
+<!--    <div class="container"> -->
         <div class="row">
             <table class="bordered">
                 <thead>
@@ -90,14 +95,16 @@
 
                 <tbody>
                 <tr>
-                    <td style="text-align: center">1000</td>
-                    <td style="text-align: center">10000</td>
-                    <td style="text-align: center">9000</td>
+                    <td id="Out_Expense" style="text-align: center"></td>
+                    <td id="Out_Income" style="text-align: center"></td>
+                    <td id="Out_Balance"style="text-align: center"></td>
                 </tr>
                 </tbody>
             </table>
         </div>
-        </div><br><br>
+<!--    </div> -->
+
+    <br><br>
 
     <div class="container">
         <div class="row">
@@ -112,11 +119,11 @@
                 <i class="material-icons right"></i>
         </button>
         </div>
-    </div>
+<!--    </div> -->
 
-    <div class="container">
+<!--    <div class="container"> -->
         <div class="row">
-            <div class="chip" style="margin-left: 25%">
+            <div class="chip">
                 <img src="" alt="" style="background-color: #542437">
                 Balance
             </div>
@@ -132,12 +139,11 @@
     </div>
 
     <section>
-        <div>
-            <canvas id="canvas" width="400" height="300">
+        <div class="container">
+            <canvas id="canvas" width="360" height="300" style="margin-left: -57px">
                 This text is displayed if your browser does not support HTML5 Canvas.
             </canvas>
         </div>
-
     </section>
 
     <script>
@@ -204,23 +210,23 @@
         <tbody>
         <tr>
             <td><b>Today</b></td>
-            <td>100</td>
-            <td>0</td>
+            <td id="Out_Expense_Today"></td>
+            <td id="Out_Income_Today"></td>
         </tr>
         <tr>
             <td><b>This Week</b></td>
-            <td>1000</td>
-            <td>0</td>
+            <td id="Out_Expense_This_Week"></td>
+            <td id="Out_Income_This_Week"></td>
         </tr>
         <tr>
             <td><b>This Month</b></td>
-            <td>5000</td>
-            <td>10000</td>
+            <td id="Out_Expense_This_Month"></td>
+            <td id="Out_Income_This_Month"></td>
         </tr>
         <tr>
             <td><b>This Year</b></td>
-            <td>60000</td>
-            <td>100000</td>
+            <td id="Out_Expense_This_Year"></td>
+            <td id="Out_Income_This_Year"></td>
         </tr>
         </tbody>
     </table>
@@ -228,72 +234,158 @@
         </div>
     </div>
 
-</div>
+    <h1 id="demo" style="margin-left: 100px"></h1>
+
+    <script type="text/javascript">
+        function expense() {
+            var variable1 = parseInt(document.getElementById('In_Expense').value);
+            document.getElementById("Out_Expense").innerHTML = variable1;
+            document.getElementById("Out_Expense_Today").innerHTML = variable1;
+            document.getElementById("Out_Expense_This_Week").innerHTML = variable1;
+            document.getElementById("Out_Expense_This_Month").innerHTML = variable1;
+            document.getElementById("Out_Expense_This_Year").innerHTML = variable1;
+        }
+    </script>
+
+    <script type="text/javascript">/**
+        function income() {
+            var variable2 = parseInt(document.getElementById('In_Income').value);
+            document.getElementById("Out_Income").innerHTML = variable2;
+            document.getElementById("Out_Income_Today").innerHTML = variable2;
+            document.getElementById("Out_Income_This_Week").innerHTML = variable2;
+            document.getElementById("Out_Income_This_Month").innerHTML = variable2;
+            document.getElementById("Out_Income_This_Year").innerHTML = variable2;
+        }
+    </script>
+
+    <script type="text/javascript">/**
+        function balance() {
+            var sum = parseInt(In_Income) - parseInt(In_Expense);
+            document.getElementById('Out_Balance').innerHTML = parseInt(sum);
+        }
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+
+        function expense() {
+            var variable1 = parseInt(document.getElementById('In_Expense').value);
+            document.getElementById("Out_Expense").innerHTML = variable1;
+            document.getElementById("Out_Expense_Today").innerHTML = variable1;
+            document.getElementById("Out_Expense_This_Week").innerHTML = variable1;
+            document.getElementById("Out_Expense_This_Month").innerHTML = variable1;
+            document.getElementById("Out_Expense_This_Year").innerHTML = variable1;
+
+            var variable2 = parseInt(document.getElementById('In_Income').value);
+            document.getElementById("Out_Income").innerHTML = variable2;
+            document.getElementById("Out_Income_Today").innerHTML = variable2;
+            document.getElementById("Out_Income_This_Week").innerHTML = variable2;
+            document.getElementById("Out_Income_This_Month").innerHTML = variable2;
+            document.getElementById("Out_Income_This_Year").innerHTML = variable2;
+
+            var variable3= variable2-variable1;
+            document.getElementById("Out_Balance").innerHTML = variable3;
+
+            var fruits = [];
+            document.getElementById("In_Expense").value = fruits;
+
+            for(var i=0;i <fruits.length;i++) {
+                ritesh += fruits[i];
+
+
+                //fruits.push(ritesh)
+                document.getElementById("demo").innerHTML = ritesh;
+            }
+        }
+    </script>
+
+
+    <script>
+ //       var fruits = [];
+ //       document.getElementById("In_Expense").innerHTML = fruits;
+//
+//        function expense() {
+//            fruits.push("")
+//            document.getElementById("demo").innerHTML = fruits;
+//        }
+    </script>
+
+
+
+
+
+
+ </div>
 <!-- Summary End -->
 
 <!-- Expense -->
 <div id="expense">
 
-    <div class="container">
+<!--    <div class="container"> -->
         <div class="row">
             <form class="col s12">
                 <div class="row">
                     <div class="input-field col s12 m8">
-                        <input placeholder="0" id="Ex_Amount" type="text" class="validate">
-                        <label for="Ex_Amount">Amout</label>
+                        <input placeholder="0" id="In_Expense" type="number" class="validate">
+                        <label for="In_Expense">Amout</label>
                     </div>
-                    <div class="input-field col s12 m8">
-                        <select class="icons">
-                            <option value="" disabled selected>Expense</option>
-                            <option value="" data-icon="images/sample-1.jpg" class="circle" id="Ex_Food">Food</option>
-                            <option value="" data-icon="images/office.jpg" class="circle" id="Ex_Travel">Travel</option>
-                            <option value="" data-icon="images/yuna.jpg" class="circle" id="Ex_Shopping">Shopping</option>
-                        </select>
-                        <label>Category</label>
+                    <div class="row">
+                        <div class="input-field col s12 m8">
+                            <select class="icons">
+                                <option value="" disabled selected>Expense</option>
+                                <option value="" data-icon="images/sample-1.jpg" class="circle" id="Ex_Food">Food</option>
+                                <option value="" data-icon="images/office.jpg" class="circle" id="Ex_Travel">Travel</option>
+                                <option value="" data-icon="images/yuna.jpg" class="circle" id="Ex_Shopping">Shopping</option>
+                            </select>
+                            <label>Category</label>
+                        </div>
                     </div>
+                    <div class="row">
+                        <div class="input-field col s12 m8">
+                            <select class="icons">
+                                <option value="" disabled selected>Types..</option>
+                                <option value="" data-icon="images/sample-1.jpg" class="circle" id="Ex_Cash">Cash</option>
+                                <option value="" data-icon="images/office.jpg" class="circle" id="Ex_Debit Card">Debit Card</option>
+                                <option value="" data-icon="images/yuna.jpg" class="circle" id="Ex_Credit Card">Credit Card</option>
+                            </select>
+                            <label>Payment</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 m8">
+                            <textarea placeholder="Desc" id="Ex_Desc" class="materialize-textarea"></textarea>
+                            <label for="Ex_Desc">Description</label>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light" type="submit" name="action" onclick="expense()">Save</button>
                 </div>
-                <div class="row">
-                    <div class="input-field col s12 m8">
-                        <select class="icons">
-                            <option value="" disabled selected>Types..</option>
-                            <option value="" data-icon="images/sample-1.jpg" class="circle" id="Ex_Cash">Cash</option>
-                            <option value="" data-icon="images/office.jpg" class="circle" id="Ex_Debit Card">Debit Card</option>
-                            <option value="" data-icon="images/yuna.jpg" class="circle" id="Ex_Credit Card">Credit Card</option>
-                        </select>
-                        <label>Payment</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12 m8">
-                        <textarea placeholder="Desc" id="Ex_Desc" class="materialize-textarea"></textarea>
-                        <label for="Ex_Desc">Description</label>
-                    </div>
-                </div>
-                <button class="btn waves-effect waves-light" type="submit" name="action">Save</button>
             </form>
         </div>
     </div>
 
-</div>
+<!--</div>
 <!-- Expense End -->
 
 <!-- Income -->
 <div id="income">
 
-    <div class="container">
+  <!--  <div class="container"> -->
         <div class="row">
             <form class="col s12">
                 <div class="row">
                     <div class="input-field col s12 m8">
-                        <input placeholder="0" id="In_Amount" type="text" class="validate">
-                        <label for="In_Amount">Amout</label>
+                        <input placeholder="0" id="In_Income" type="number" class="validate">
+                        <label for="In_Income">Amout</label>
                     </div>
                     <div class="input-field col s12 m8">
                         <select class="icons">
                             <option value="" disabled selected>Expense</option>
-                            <option value="" data-icon="images/sample-1.jpg" class="circle" id="In_Food">Food</option>
-                            <option value="" data-icon="images/office.jpg" class="circle" id="In_Travel">Travel</option>
-                            <option value="" data-icon="images/yuna.jpg" class="circle" id="In_Shopping">Shopping</option>
+                            <option value="" data-icon="images/sample-1.jpg" class="circle" id="In_Food">Salary</option>
+                            <option value="" data-icon="images/office.jpg" class="circle" id="In_Travel">House Rent</option>
+                            <option value="" data-icon="images/yuna.jpg" class="circle" id="In_Shopping">Pensions</option>
                         </select>
                         <label>Category</label>
                     </div>
@@ -315,11 +407,11 @@
                         <label for="In_Desc">Description</label>
                     </div>
                 </div>
-                <button class="btn waves-effect waves-light" type="submit" name="action">Save</button>
+                <button class="btn waves-effect waves-light" type="submit" name="action" onclick="expense()">Save</button>
             </form>
         </div>
     </div>
-
+<!--
 </div>
 <!-- Income End -->
 
@@ -339,7 +431,6 @@
 
 <br>
 <footer class="page-footer">
-
     <div class="footer-copyright">
         <div class="container">
             © 2015 Ubiquos Inc. All rights reserved.
