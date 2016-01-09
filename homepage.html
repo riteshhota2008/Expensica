@@ -29,18 +29,52 @@
         };
     </script>
     <script src="//cdn.transifex.com/live.js"></script>
+
+    <style>
+        @media (min-width: 768px) {
+            .navbar-fixed .nav-wrapper a.brand-logo {
+                left: 4%;
+            }
+        }
+    </style>
+
 </head>
 <body>
 <header>
-    <div class="container">
-        <a href="#" data-activates="nav-mobile" class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only">
-            <i class="mdi-navigation-menu"></i>
-        </a>
-    </div>
+
+    <div class="navbar-fixed">
+
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo" style="margin-left: 10px">Expensica</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <!-- <li><a href="sass.html">Sass</a></li>
+                     <li><a href="badges.html">Components</a></li>
+                     <li><a href="collapsible.html">Javascript</a></li>
+                     <li><a href="mobile.html">Mobile</a></li> -->
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li class="logo"><img src="res/ic_launcher%202.png" style="margin: 10px 0 0 0">
+                    <li class="bold"><a href="login.html" class="waves-effect waves-teal">Login / Register</a></li>
+                    <li class="bold"><a href="homepage.html" class="waves-effect waves-teal">Home</a></li>
+                    <li class="no-padding">
+                        <ul class="collapsible collapsible-accordion">
+                            <li class="bold"><a href="#" class="collapsible-header  waves-effect waves-teal">Settings</a></li>
+                            <li class="bold"><a href="#" class="collapsible-header  waves-effect waves-teal">Rate</a></li>
+                            <li class="bold"><a href="#" class="collapsible-header  waves-effect waves-teal">Share</a></li>
+                        </ul>
+                    </li>
+                    <li class="bold"><a href="#" class="waves-effect waves-teal">Help</a></li>
+                    <li class="bold"><a href="about.html" class="waves-effect waves-teal">About</a></li>
+                </ul>
+            </div>
+        </nav></div>
+
+    <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only"><i class="mdi-navigation-menu"></i></a></div>
     <ul id="nav-mobile" class="side-nav fixed">
         <li class="logo"><img src="res/ic_launcher%202.png" style="margin: -20px 0 0 0"> <!--<a id="logo-container" href="http://materializecss.com/" class="brand-logo">
-            <object id="front-page-logo" type="image/svg+xml" data="res/ic_launcher.png" style="margin: -10px 0 0 50px; width: 100px">Your browser does not support SVG</object></a>-->
-        </li>
+            <object id="front-page-logo" type="image/svg+xml" data="res/ic_launcher.png" style="margin: -10px 0 0 50px; width: 100px">Your browser does not support SVG</object></a>--></li>
         <li class="search">
             <div class="search-wrapper card">
                 <input id="search"><i class="material-icons">search</i>
@@ -59,6 +93,9 @@
         <li class="bold"><a href="#" class="waves-effect waves-teal">Help</a></li>
         <li class="bold"><a href="about.html" class="waves-effect waves-teal">About</a></li>
     </ul>
+
+
+
 </header>
 
 <main>

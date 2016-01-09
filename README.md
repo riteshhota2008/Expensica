@@ -20,6 +20,14 @@ Chrome 35+, Firefox 31+, Safari 7+, IE 10+
 
 ## Changelog
 
+v1.5 - Made top navbar fixed
+
+v1.4 - Added form to get income details
+
+v1.3 - Added form to get expense details
+
+v1.2 - Added Pie Chart & Table to summary page
+
 v1.1 - Added Summary Page,
        Expense Page,
        Income Page
