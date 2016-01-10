@@ -36,6 +36,17 @@
                 left: 4%;
             }
         }
+        /*.bordered {
+
+            border: 1px solid #000;
+
+        }*/
+        /*th, td {
+            width: 25%;
+            text-align: left;
+            vertical-align: top;
+            border: 1px solid #000;
+        }*/
     </style>
 
 </head>
@@ -47,7 +58,7 @@
         <nav>
             <div class="nav-wrapper">
                 <a href="#!" class="brand-logo" style="margin-left: 10px">Expensica</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons" style="margin-left: 10px">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <!-- <li><a href="sass.html">Sass</a></li>
                      <li><a href="badges.html">Components</a></li>
@@ -56,17 +67,17 @@
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
                     <li class="logo"><img src="res/ic_launcher%202.png" style="margin: 10px 0 0 0">
-                    <li class="bold"><a href="login.html" class="waves-effect waves-teal">Login / Register</a></li>
-                    <li class="bold"><a href="homepage.html" class="waves-effect waves-teal">Home</a></li>
+                    <li class="bold" style="text-align: left;border-bottom: 1px solid #d3d3d3"><a href="login.html" class="collapsible-header waves-effect waves-teal"><i class="material-icons">perm_identity</i>Login / Register</a></li>
+                    <li class="bold" style="text-align: left;border-bottom: 1px solid #d3d3d3"><a href="homepage.html" class="collapsible-header waves-effect waves-teal"><i class="material-icons">home</i>Home</a></li>
                     <li class="no-padding">
                         <ul class="collapsible collapsible-accordion">
-                            <li class="bold"><a href="#" class="collapsible-header  waves-effect waves-teal">Settings</a></li>
-                            <li class="bold"><a href="#" class="collapsible-header  waves-effect waves-teal">Rate</a></li>
-                            <li class="bold"><a href="#" class="collapsible-header  waves-effect waves-teal">Share</a></li>
+                            <li class="bold" style="text-align: left;border-bottom: 1px solid #d3d3d3"><a href="#" class="collapsible-header  waves-effect waves-teal"><i class="material-icons">settings</i>Settings</a></li>
+                            <li class="bold" style="text-align: left;border-bottom: 1px solid #d3d3d3"><a href="#" class="collapsible-header  waves-effect waves-teal"><i class="material-icons">grade</i>Rate</a></li>
+                            <li class="bold" style="text-align: left;border-bottom: 1px solid #d3d3d3"><a href="#" class="collapsible-header  waves-effect waves-teal"><i class="material-icons">share</i>Share</a></li>
                         </ul>
                     </li>
-                    <li class="bold"><a href="#" class="waves-effect waves-teal">Help</a></li>
-                    <li class="bold"><a href="about.html" class="waves-effect waves-teal">About</a></li>
+                    <li class="bold" style="text-align: left;border-bottom: 1px solid #d3d3d3"><a href="#" class="collapsible-header waves-effect waves-teal"><i class="material-icons">help</i>Help</a></li>
+                    <li class="bold" style="text-align: left;border-bottom: 1px solid #d3d3d3"><a href="about.html" class="collapsible-header waves-effect waves-teal"><i class="material-icons">info</i>About</a></li>
                 </ul>
             </div>
         </nav></div>
@@ -81,17 +92,17 @@
                 <div class="search-results"></div>
             </div>
         </li>
-        <li class="bold"><a href="login.html" class="waves-effect waves-teal">Login / Register</a></li>
-        <li class="bold"><a href="homepage.html" class="waves-effect waves-teal">Home</a></li>
+        <li class="bold"><a href="login.html" class="collapsible-header waves-effect waves-teal"><i class="material-icons">perm_identity</i>Login / Register</a></li>
+        <li class="bold"><a href="homepage.html" class="collapsible-header waves-effect waves-teal"><i class="material-icons">home</i>Home</a></li>
         <li class="no-padding">
             <ul class="collapsible collapsible-accordion">
-                <li class="bold"><a href="#" class="collapsible-header  waves-effect waves-teal">Settings</a></li>
-                <li class="bold"><a href="#" class="collapsible-header  waves-effect waves-teal">Rate</a></li>
-                <li class="bold"><a href="#" class="collapsible-header  waves-effect waves-teal">Share</a></li>
+                <li class="bold"><a href="#" class="collapsible-header  waves-effect waves-teal"><i class="material-icons">settings</i>Settings</a></li>
+                <li class="bold"><a href="#" class="collapsible-header  waves-effect waves-teal"><i class="material-icons">grade</i>Rate</a></li>
+                <li class="bold"><a href="#" class="collapsible-header  waves-effect waves-teal"><i class="material-icons">share</i>Share</a></li>
             </ul>
         </li>
-        <li class="bold"><a href="#" class="waves-effect waves-teal">Help</a></li>
-        <li class="bold"><a href="about.html" class="waves-effect waves-teal">About</a></li>
+        <li class="bold"><a href="#" class="collapsible-header waves-effect waves-teal"><i class="material-icons">help</i>Help</a></li>
+        <li class="bold"><a href="about.html" class="collapsible-header waves-effect waves-teal"><i class="material-icons">info</i>About</a></li>
     </ul>
 
 
@@ -232,6 +243,61 @@
 
     </script><br>
 
+   <!-- <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1", {packages:["corechart"]});
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Work',     11],
+                ['Eat',      2],
+                ['Commute',  2],
+                ['Watch TV', 2],
+                ['Sleep',    7]
+            ]);
+
+            var options = {
+                title: 'My Daily Activities'
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+
+    <div id="piechart" style="width: 300px; height: 500px;"></div>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['bar']});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Year', 'Sales', 'Expenses', 'Profit'],
+                ['2014', 1000, 400, 200],
+                ['2015', 1170, 460, 250],
+                ['2016', 660, 1120, 300],
+                ['2017', 1030, 540, 350]
+            ]);
+
+            var options = {
+                chart: {
+                    title: 'Company Performance',
+                    subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+                },
+                bars: 'vertical' // Required for Material Bar Charts.
+            };
+
+            var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+            chart.draw(data, options);
+        }
+    </script>
+    <div id="barchart_material" style="width: 320px; height: 500px;"></div> -->
+
     <div class="container">
         <div class="row">
 
@@ -274,7 +340,7 @@
     <h1 id="demo" style="margin-left: 100px"></h1>
 
     <script type="text/javascript">
-        function expense() {
+        /**function expense() {
             var variable1 = parseInt(document.getElementById('In_Expense').value);
             document.getElementById("Out_Expense").innerHTML = variable1;
             document.getElementById("Out_Expense_Today").innerHTML = variable1;
@@ -309,7 +375,7 @@
     <script type="text/javascript">
 
         function expense() {
-            var variable1 = parseInt(document.getElementById('In_Expense').value);
+            /*var variable1 = parseInt(document.getElementById('In_Expense').value);
             document.getElementById("Out_Expense").innerHTML = variable1;
             document.getElementById("Out_Expense_Today").innerHTML = variable1;
             document.getElementById("Out_Expense_This_Week").innerHTML = variable1;
@@ -324,27 +390,28 @@
             document.getElementById("Out_Income_This_Year").innerHTML = variable2;
 
             var variable3= variable2-variable1;
-            document.getElementById("Out_Balance").innerHTML = variable3;
+            document.getElementById("Out_Balance").innerHTML = variable3;**/
 
             //var fruits = [];
-            var ritesh;
+
+            /**var ritesh;
             var weekdays=new Array(10);
             document.getElementById("In_Expense").value = weekdays;
 
-            for(var i=0;i <10;i++) {
-                ritesh = weekdays[i];
+            for(var i=0;i <weekdays.length;i++) {
+                ritesh += weekdays[i];
 
 
                 weekdays.push(ritesh);
                 document.getElementById("demo").innerHTML = ritesh;
-            }
+            } **/
 
             //var myStringArray = ["Hello","World"];
             var myStringArray = new Array(10);
             document.getElementById("In_Expense").value = myStringArray;
             var arrayLength = myStringArray.length;
             for (var i = 0; i < arrayLength; i++) {
-                alert(myStringArray[i]);
+                //alert(myStringArray[i]);
                 //Do something
                 document.getElementById("demo").innerHTML = myStringArray[i];
             }
@@ -465,7 +532,7 @@
 </div>
 <!-- Income End -->
 
-    <div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;">
+    <div class="fixed-action-btn vertical" style="bottom: 45px; right: 24px;">
         <a class="btn-floating btn-large red">
             <i class="large material-icons">mode_edit</i>
         </a>

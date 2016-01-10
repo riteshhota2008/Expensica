@@ -20,6 +20,8 @@ Chrome 35+, Firefox 31+, Safari 7+, IE 10+
 
 ## Changelog
 
+v1.6 - Added material icons to side nav and menu bar
+
 v1.5 - Made top navbar fixed
 
 v1.4 - Added form to get income details
